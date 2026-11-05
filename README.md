@@ -10,6 +10,10 @@ This repository contains the complete implementation and experimental evidence f
 - A **synthetic PV string testbed** built on the Bishop diode model, with four reproducible partial-shading scenarios and independent ground truth.
 - Nine **controlled experiments** covering paper reproduction, shifted-optimum robustness, ablation, leader isolation, timing/resource cost, and scalar-leader effects.
 
+![Verified P-V scenarios](pv_testbed/verify_scenarios.png)
+
+*The four preset partial-shading scenarios produced by the PV testbed, with ground-truth peaks (red) and the global maximum (gold star). The adversarial case has a narrow global peak beside a wide local one.*
+
 ---
 
 ## Table of contents
@@ -226,6 +230,10 @@ The PSOMbest discrepancy is not a crash: it is dominated by the high-dimensional
 | Standard PSO | 30,150 | ~0 V | 100% |
 
 The confined B2 result is the strongest compute story in the project: once every 0.3 V bin in a region has been visited, freezing its captive particles means almost no further evaluations are spent, yet the GMPP is still found. The dynamic B2 variant intentionally does not freeze anything, so its evaluation count is unchanged.
+
+![B2 budget sweep](variants/b2_coverage/plot_b2_budget_sweep.png)
+
+*B2 budget sweep on a wide-range 15-group × 2-module scenario: success rate, execution time, and function evaluations as the particle budget grows. Freezing pays off once the initial coverage sweep can exhaust a region early.*
 
 ---
 

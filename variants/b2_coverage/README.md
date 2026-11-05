@@ -9,7 +9,7 @@ B2 adds a second mechanism on top of B1: track which voltage bins have been visi
 | `tabu_coverage.py` | `RegionCoverage`: per-region bin visitation and exhaustion flags (passive tracking only) |
 | `b1_confined_b2.py` | B2 applied to **confined** B1: freezes exhausted regions and stops evaluating their particles |
 | `b1_dynamic_b2.py` | B2 applied to **dynamic** B1: drops the leader pull in exhausted regions but never freezes or skips evaluations |
-| `plot_b2_budget_sweep.png` | Budget-sweep figure |
+| `plot_b2_budget_sweep.png` | Budget-sweep figure (success, time, evaluations vs particle count on a wide-range 15-group × 2-module scenario) |
 | `results_b2_full_suite.csv` | 7 scenarios × 30 seeds for B1_confined, B1_confined_B2, B1_dynamic, B1_dynamic_B2, P&O, StandardPSO |
 | `results_b2_budget_sweep.csv` | Budget sweep over six `(N, MaxIt)` settings |
 
