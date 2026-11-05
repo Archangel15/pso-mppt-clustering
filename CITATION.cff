@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+type: software
+title: "Clustering-Based PSO for Global MPPT of Partially Shaded PV Strings"
+abstract: >-
+  Reproducible Python implementation and experimental evidence for PSOMbest
+  (Twumasi et al., 2024) and the B1/B2 frozen-clustering and coverage-based
+  PSO variants for global maximum power point tracking in partially shaded
+  photovoltaic strings.
+authors:
+  - name: "Archangel15"
+    website: "https://github.com/Archangel15"
+version: "1.0.0"
+date-released: "2026-11-05"
+license: MIT
+repository-code: "https://github.com/Archangel15/pso-mppt-clustering"
+keywords:
+  - particle swarm optimization
+  - maximum power point tracking
+  - photovoltaic
+  - partial shading
+  - clustering
+  - PSOMbest
+  - reproducibility

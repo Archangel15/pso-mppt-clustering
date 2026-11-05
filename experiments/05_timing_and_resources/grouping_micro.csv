@@ -1,0 +1,13 @@
+dim,step,seconds_for_all_iterations
+2,PSOMbest: k-means every iteration,1.0061641999927815
+2,B1-fade: label + leader table,0.04181070000049658
+2,B1-coord-fade: label + leader table,0.08060819999082014
+2,B1-proj-fade: label + leader table,0.03114310000091791
+30,PSOMbest: k-means every iteration,1.1956314999843016
+30,B1-fade: label + leader table,0.06673180000507273
+30,B1-coord-fade: label + leader table,0.16001130000222474
+30,B1-proj-fade: label + leader table,0.031047299999045208
+100,PSOMbest: k-means every iteration,1.1193123999983072
+100,B1-fade: label + leader table,0.48020330001600087
+100,B1-coord-fade: label + leader table,0.301535500009777
+100,B1-proj-fade: label + leader table,0.03911260000313632

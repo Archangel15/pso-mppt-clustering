@@ -1,0 +1,43 @@
+Full runs: median over 3 repeats, 1000 iterations, N=150, cases F1, F5, F9, F12, F14, F17_100D
+
+| Algorithm | Total wall s | Ratio to PSO | CPU s | CPU ratio | k-means calls/run | Lloyd iterations/run |
+|---|---|---|---|---|---|---|
+| PSO | 24.6 | 1.00 | 24.6 | 1.00 | 0 | 0 |
+| PSOMbest (Master code) | 33.6 | 1.36 | 33.7 | 1.37 | 1000 | 7681 |
+| PSOMbest + velocity memory | 31.3 | 1.27 | 31.3 | 1.27 | 1000 | 6094 |
+| B1-fade | 29.9 | 1.21 | 29.7 | 1.21 | 0 | 0 |
+| B1-coord-fade | 30.8 | 1.25 | 30.8 | 1.25 | 0 | 0 |
+| B1-proj-fade | 28.1 | 1.14 | 28.0 | 1.14 | 0 | 0 |
+
+Ratio to PSO per case (median wall time)
+
+| Algorithm | F1 | F5 | F9 | F12 | F14 | F17_100D |
+|---|---|---|---|---|---|---|
+| PSO | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 |
+| PSOMbest (Master code) | 1.44 | 1.18 | 1.34 | 1.45 | 1.36 | 1.41 |
+| PSOMbest + velocity memory | 1.16 | 1.17 | 1.13 | 1.43 | 1.34 | 1.42 |
+| B1-fade | 1.19 | 1.16 | 1.22 | 1.26 | 1.17 | 1.28 |
+| B1-coord-fade | 1.26 | 1.22 | 1.23 | 1.28 | 1.24 | 1.29 |
+| B1-proj-fade | 1.15 | 1.14 | 1.12 | 1.14 | 1.14 | 1.15 |
+
+Peak memory (tracemalloc, F9 100-D, 100 iterations)
+
+| Algorithm | Peak MB |
+|---|---|
+| PSO | 0.36 |
+| PSOMbest (Master code) | 0.92 |
+| PSOMbest + velocity memory | 0.92 |
+| B1-fade | 1.51 |
+| B1-coord-fade | 0.72 |
+| B1-proj-fade | 1.21 |
+
+Grouping step alone, 1000 iterations (seconds)
+
+| step                                |     2 |    30 |   100 |
+|:------------------------------------|------:|------:|------:|
+| B1-coord-fade: label + leader table | 0.081 | 0.16  | 0.302 |
+| B1-fade: label + leader table       | 0.042 | 0.067 | 0.48  |
+| B1-proj-fade: label + leader table  | 0.031 | 0.031 | 0.039 |
+| PSOMbest: k-means every iteration   | 1.006 | 1.196 | 1.119 |
+
+Paper (i7-7500U, MATLAB): PSO 84.52 s, PSOMbest 150.29 s -> PSOMbest = 1.78 x PSO.

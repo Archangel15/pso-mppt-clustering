@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+
+# Environments
+.venv/
+venv/
+pso_env/
+env/
+
+# Generated experiment outputs (results are committed intentionally; these
+# patterns only ignore fresh local re-runs and OS noise)
+*.log
+PSOMbest_Python_Reproduction_Results/
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
